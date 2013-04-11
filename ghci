@@ -1,0 +1,5 @@
+
+:set -XNoMonomorphismRestriction
+:set -XOverloadedStrings
+:set prompt "ghci> "
+

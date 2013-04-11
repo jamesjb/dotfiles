@@ -1,0 +1,13 @@
+#
+# gcc-arm --- Bash setup for the GCC/ARM compiler.
+#
+# Copyright (C) 2013, James Bielman <jamesjb@gmail.com>
+# All Rights Reserved.
+#
+
+# If the directory "$HOME/gcc-arm/bin" exists, add it to "PATH".
+if [ -d $HOME/gcc-arm/bin ]; then
+  path_append $HOME/gcc-arm/bin
+fi
+
+# vim: ft=sh ts=2 et:

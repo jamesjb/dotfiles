@@ -1,0 +1,61 @@
+!
+! .Xdefaults - Settings for common X11 applications.
+!
+! Copyright (C) 2001-2013, James Bielman <jamesjb@gmail.com>
+! All Rights Reserved.
+!
+
+emacs*verticalScrollBars: false
+emacs*toolBar: false
+emacs*menuBar: false
+emacs.font: Inconsolata-13
+emacs.background: black
+emacs.foreground: #cccccc
+emacs.cursorColor: #cccccc
+emacs.mode-line.attributeBackground: DarkBlue
+emacs.mode-line.attributeForeground: White
+
+!
+! XTerm General Settings
+!
+
+XTerm*faceName: Inconsolata-12
+XTerm*backarrowKey: false
+XTerm*internalBorder: 2
+XTerm*scrollBar: false
+XTerm*background: black
+XTerm*foreground: grey65
+XTerm*cursorColor: grey65
+XTerm.VT100*colorMode: on
+XTerm.VT100*dynamicColors: on
+XTerm.VT100*eightBitInput: false
+XTerm.VT100*eightBitOutput: true
+XTerm.VT100*colorBDMode: on
+XTerm.VT100*colorBD: #ffffff
+XTerm*boldMode: off
+XTerm*utmpInhibit: on
+XTerm*visualBell: on
+XTerm*saveLines: 5000
+XTerm*utf8: 1
+
+!
+! XTerm Colors
+!
+
+XTerm.VT100*color0:  #000000
+XTerm.VT100*color1:  #b21818
+XTerm.VT100*color2:  #18b218
+XTerm.VT100*color3:  #b26818
+XTerm.VT100*color4:  #1818b2
+XTerm.VT100*color5:  #b218b2
+XTerm.VT100*color6:  #18b2b2
+XTerm.VT100*color7:  #b2b2b2
+XTerm.VT100*color8:  #686868
+XTerm.VT100*color9:  #ff5454
+XTerm.VT100*color10: #54ff54
+XTerm.VT100*color11: #ffff54
+XTerm.VT100*color12: #5454ff
+XTerm.VT100*color13: #ff54ff
+XTerm.VT100*color14: #54ffff
+XTerm.VT100*color15: #ffffff
+

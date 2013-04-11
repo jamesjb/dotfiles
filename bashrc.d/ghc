@@ -1,0 +1,11 @@
+#
+# .bashrc/ghc --- Bash setup for the GHC compiler.
+#
+# Copyright (C) 2013, James Bielman <jamesjb@gmail.com>
+# All Rights Reserved.
+#
+
+path_append $HOME/.cabal/bin
+path_append $HOME/ghc/current/bin
+
+# vim: ft=sh ts=2 et:
