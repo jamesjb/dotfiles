@@ -97,8 +97,8 @@
 ;; (slime-setup)
 
 ;;; haskell-mode setup
-(when (file-readable-p "~/lib/emacs/haskell-mode/haskell-site-file")
-  (load "~/lib/emacs/haskell-mode/haskell-site-file")
+(when (file-readable-p "~/lib/emacs/haskell-mode/haskell-site-file.el")
+  (load "~/lib/emacs/haskell-mode/haskell-site-file.el")
   (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
   (setq haskell-program-name "~/ghc/current/bin/ghci"))
