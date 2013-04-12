@@ -30,20 +30,22 @@ if [ -n "$PS1" ]; then
   # FIXME: Conditionalize this for Mac OS X and "gls".
   alias ls='ls --color=auto $LSFLAGS'          # alias for color ls
   PS1='[\u@\h \[[1m\]\w\[[0m\]] '
+fi
 
-  # If the directory "$HOME/.bashrc.d" exists, source each file
-  # within it.  This is used for per-package setup that will vary
-  # on different machines.
-  if [ -d $HOME/.bashrc.d ]; then
-    for f in $HOME/.bashrc.d/*; do
-      if [ -r $f ]; then
-        source $f
-      fi
-    done
-  fi
+## Package Configuration
 
-  # If the file "$HOME/.bashrc_local" exists, source it.
-  if [ -r $HOME/.bashrc_local ]; then
-    source $HOME/.bashrc_local
-  fi
+# If the directory "$HOME/.bashrc.d" exists, source each file
+# within it.  This is used for per-package setup that will vary
+# on different machines.
+if [ -d $HOME/.bashrc.d ]; then
+  for f in $HOME/.bashrc.d/*; do
+    if [ -r $f ]; then
+      source $f
+    fi
+  done
+fi
+
+# If the file "$HOME/.bashrc_local" exists, source it.
+if [ -r $HOME/.bashrc_local ]; then
+  source $HOME/.bashrc_local
 fi
