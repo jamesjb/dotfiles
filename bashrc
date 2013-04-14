@@ -25,10 +25,17 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ## Interactive Shell Configuration
 
 if [ -n "$PS1" ]; then
+  OS=`uname`
   ulimit -c unlimited
 
-  # FIXME: Conditionalize this for Mac OS X and "gls".
-  alias ls='ls --color=auto $LSFLAGS'          # alias for color ls
+  if [ "$OS" == "Darwin" ]; then
+    if [ -x `which gls` ]; then
+      alias ls="gls --color=auto $LSFLAGS"
+    fi
+  else
+    alias ls='ls --color=auto $LSFLAGS'
+  fi
+
   PS1='[\u@\h \[[1m\]\w\[[0m\]] '
 fi
 
