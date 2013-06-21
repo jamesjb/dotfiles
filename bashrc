@@ -9,7 +9,6 @@
 
 unset HISTFILE                                  # turn off history file
 export EDITOR=vim                               # default text editor
-export LSFLAGS="-F -B"                          # default options for ls
 
 # Append a directory to "PATH" if it is not already there.
 path_append()
@@ -30,10 +29,10 @@ if [ -n "$PS1" ]; then
 
   if [ "$OS" == "Darwin" ]; then
     if [ -x `which gls` ]; then
-      alias ls="gls --color=auto $LSFLAGS"
+      alias ls="gls --color=auto -F -B"
     fi
   else
-    alias ls='ls --color=auto $LSFLAGS'
+    alias ls='ls --color=auto -F -B'
   fi
 
   PS1='[\u@\h \[[1m\]\w\[[0m\]] '
