@@ -35,6 +35,10 @@ if [ -n "$PS1" ]; then
     alias ls='ls --color=auto -F -B'
   fi
 
+  if [ -x `which vim` ]; then
+    alias vi=vim
+  fi
+
   PS1='[\u@\h \[[1m\]\w\[[0m\]] '
 fi
 
