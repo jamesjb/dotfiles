@@ -28,14 +28,14 @@ if [ -n "$PS1" ]; then
   ulimit -c unlimited
 
   if [ "$OS" == "Darwin" ]; then
-    if [ -x `which gls` ]; then
+    if hash gls 2>/dev/null; then
       alias ls="gls --color=auto -F -B"
     fi
   else
     alias ls='ls --color=auto -F -B'
   fi
 
-  if [ -x `which vim` ]; then
+  if hash vim 2>/dev/null; then
     alias vi=vim
   fi
 
