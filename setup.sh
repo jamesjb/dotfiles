@@ -6,7 +6,7 @@
 # All Rights Reserved.
 #
 
-# maybe_backup(FILE) 
+# maybe_backup(FILE)
 #
 # Move FILE to FILE.orig if it exists.
 maybe_backup()
