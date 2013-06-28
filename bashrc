@@ -39,7 +39,12 @@ if [ -n "$PS1" ]; then
     alias vi=vim
   fi
 
-  PS1='[\u@\h \[[1m\]\w\[[0m\]] '
+  if [ "$TERM" == "dumb" ]; then
+    # Set an obviously correct prompt for Emacs tramp mode.
+    PS1="$ "
+  else
+    PS1='[\u@\h \[[1m\]\w\[[0m\]] '
+  fi
 fi
 
 ## Package Configuration
