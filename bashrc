@@ -21,6 +21,8 @@ path_append()
 # Set up a reasonable default PATH.
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
+path_append $HOME/bin
+
 ## Interactive Shell Configuration
 
 if [ -n "$PS1" ]; then
