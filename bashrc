@@ -66,3 +66,5 @@ fi
 if [ -r $HOME/.bashrc_local ]; then
   source $HOME/.bashrc_local
 fi
+
+export PATH
