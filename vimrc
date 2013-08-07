@@ -18,3 +18,5 @@ set showmatch
 set modeline
 filetype indent off
 filetype plugin indent off
+
+set pastetoggle=<F2>
