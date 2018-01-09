@@ -20,3 +20,13 @@ filetype indent off
 filetype plugin indent off
 
 set pastetoggle=<F2>
+imap jk <Esc>
+
+call plug#begin('~/.vim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
+call plug#end()
+
+let g:ctrlp_working_path_mode = 'a'
+
+let mapleader=","
+nnoremap <Leader>b :CtrlPBuffer<CR>
