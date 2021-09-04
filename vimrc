@@ -5,8 +5,13 @@
 " All Rights Reserved.
 "
 
-syntax on
-colors elflord
+" Source a file if it exists.
+function! SourceIfExists(file)
+    if filereadable(expand(a:file))
+        exe 'source' a:file
+    endif
+endfunction
+
 set ts=4
 set sw=4
 set et
@@ -20,27 +25,39 @@ set nohlsearch
 set backspace=2
 set nu
 set ruler
+set visualbell
+
+syntax on
+
 filetype indent off
 filetype plugin indent off
 
-" set list
-" set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
-set listchars=tab:␉·,trail:␠,nbsp:⎵
+if has('win32')
+    set guifont=Consolas:h12
+endif
+
+set guicursor+=a:blinkon0
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
 
 set pastetoggle=<F2>
 imap jk <Esc>
 
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'fatih/vim-go'
+Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+call SourceIfExists("~/.vimrc_plugins.local")
 call plug#end()
+
+colorscheme molokai
 
 let g:ctrlp_working_path_mode = 'a'
 
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline_theme = 'bubblegum'
 
 let mapleader=","
@@ -48,6 +65,4 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 
 let maplocalleader = "\\"
 
-autocmd FileType go nmap <LocalLeader>b <Plug>(go-build)
-autocmd FileType go nmap <LocalLeader>r <Plug>(go-run)
-autocmd FileType go nmap <LocalLeader>i <Plug>(go-imports)
+call SourceIfExists("~/.vimrc.local")
