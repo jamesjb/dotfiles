@@ -36,6 +36,12 @@ if has('win32')
     set guifont=Consolas:h12
 endif
 
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 set guicursor+=a:blinkon0
 set guioptions-=m
 set guioptions-=T
@@ -47,18 +53,18 @@ imap jk <Esc>
 
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tomasr/molokai'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call SourceIfExists("~/.vimrc_plugins.local")
 call plug#end()
 
-colorscheme molokai
+colorscheme onehalfdark
 
 let g:ctrlp_working_path_mode = 'a'
 
-let g:airline_powerline_fonts = 0
-let g:airline_theme = 'bubblegum'
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'onehalfdark'
 
 let mapleader=","
 nnoremap <Leader>b :CtrlPBuffer<CR>
