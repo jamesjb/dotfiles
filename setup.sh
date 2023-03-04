@@ -33,4 +33,8 @@ symlink zshrc      .zshrc
 symlink vimrc      .vimrc
 symlink emacs.el   .emacs.el
 symlink Xresources .Xresources
+
+mkdir -p ~/.config/wezterm
+symlink wezterm/wezterm.lua .config/wezterm/wezterm.lua
+
 echo "Done."
