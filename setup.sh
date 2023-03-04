@@ -29,6 +29,7 @@ symlink()
 
 symlink bashrc     .bashrc
 symlink profile    .profile
+symlink zshrc      .zshrc
 symlink vimrc      .vimrc
 symlink emacs.el   .emacs.el
 symlink Xresources .Xresources
